@@ -8,10 +8,19 @@ html
 
   body  
     block navbar
+      div.navbar 
+        div.logo 
+          img(src="/static/img/random.jpg", alt="Logo")
+        p Weeblogg! Administration
+
     block content
-      include include/nav
-      if(page = "post")
-        include include/post
+      section.dashpage
+        include include/nav
+        if(page = "post")
+          include include/post
+        //- if(message)
+        //-   h1.message=message
+
 
 
     block foot

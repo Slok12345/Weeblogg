@@ -16,7 +16,7 @@ try {
     }
 })
 
-router.post("/post", (req, res) => {
+router.post("/post", async (req, res) => {
     try 
     {   
         const blog =  Post({
@@ -26,8 +26,12 @@ router.post("/post", (req, res) => {
             author : req.body.author,
             category : req.body.category
         })
-        blog.save()
-        res.json(blog)
+        await blog.save()
+        res.render("../views/Dashboard/admin.pug", {
+            page: "post",
+            message: " your blog is uploaded Chillax!!! "
+        })
+        Headers
     } catch (err) {
         res.render("Data not Saved")    
     }

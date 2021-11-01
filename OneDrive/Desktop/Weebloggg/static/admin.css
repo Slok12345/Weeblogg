@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap');
 body{
     max-width: 85%;
     margin: auto;
@@ -11,7 +12,28 @@ body{
     padding: 0%;
     color: black;
 }
-
+/* Navbar */
+.navbar{
+    display: flex;
+    background-color: rgb(115, 41, 199);
+}
+.navbar div.logo{
+    height: 60px;
+    width: auto;
+}
+.navbar div.logo img{
+    margin: 2px;
+    height: 56px;
+    width: auto;
+}
+.navbar p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-family: 'Baloo Paaji 2', cursive;    
+    font-size: 25px;
+}
 /* navigation */
 .navigation{
     display: flex;
@@ -21,11 +43,11 @@ body{
     background-color: rgb(115, 41, 199);
     color: black;
 }
-.navigation h1.dashboard{
+.navigation h3.dashboard{
     margin: 5px;
     padding: 10px;
     align-self: center;
-    font-family: Nova Mono;
+    font-family: 'Baloo Paaji 2', cursive;
 }
 .navigation div.menu{
     display: flex;
@@ -60,6 +82,11 @@ body{
     display: flex;
     height: 30px;
     width: 250px;
+}
+
+section.dashpage{
+display: flex;
+flex-direction: row;
 }
 
 
