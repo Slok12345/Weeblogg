@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+body{
+    max-width: 85%;
+    margin: auto;
+}
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0%;
+    padding: 0%;
+    color: black;
+}
+
+/* navigation */
+.navigation{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 250px;
+    background-color: rgb(115, 41, 199);
+    color: black;
+}
+.navigation h1.dashboard{
+    margin: 5px;
+    padding: 10px;
+    align-self: center;
+    font-family: Nova Mono;
+}
+.navigation div.menu{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 10px;
+    overflow-y: auto;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.navigation div.menu li{
+    width: 200px;
+    display: flex;
+    font-family: Balsamiq sans;
+    font-size: 20px;
+    justify-content: space-between;
+}
+
+
+/* Post.pug */
+.post_container{
+    display: flex;
+    flex-direction: column;
+}
+.post_container form input{
+    display: flex;
+    height: 30px;
+    width: 250px;
+}
+.post_container form button{
+    display: flex;
+    height: 30px;
+    width: 250px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.foot div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(115, 41, 199);
+    font-size: 18px;
+    font-family: 'Balsamiq Sans', cursive;
+    height: 9vh;
+}

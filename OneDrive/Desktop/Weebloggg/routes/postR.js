@@ -6,9 +6,11 @@ const fs = require('fs')
 
 router.use(express.json()) // for parsing application/json
 router.use(express.urlencoded({ extended: true }))
-router.get(`/post`, (req,res)=>{
+router.get("/post", (req,res)=>{
 try {
-        res.render("../views/addpost.pug")
+        res.render("../views/Dashboard/admin.pug", {
+            page: "post"
+        })
     } catch (err) {
         res.status(500).json(err)
     }

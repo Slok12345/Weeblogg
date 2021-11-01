@@ -1,25 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
 body{
     max-width: 85%;
     margin: auto;
 }
-.post_container{
-    display: flex;
-    flex-direction: column;
-}
-.post_container form input{
-    display: flex;
-    /* flex-direction: column; */
-    height: 30px;
-    width: 250px;
-}
-.post_container form button{
-    display: flex;
-    /* flex-direction: column; */
-    height: 30px;
-    width: 250px;
-}
-@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
 /* LAYOUT TEMPLATE STYLING */
 li a{
     text-decoration: none;

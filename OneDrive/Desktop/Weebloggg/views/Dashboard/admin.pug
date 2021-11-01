@@ -1,0 +1,21 @@
+- let newpage = page
+doctype html 
+html
+  head
+    title Weeeblogg/Admin 
+    link(rel="stylesheet", href="../static/admin.css")
+    script(src="https://kit.fontawesome.com/d7104b8efc.js" crossorigin="anonymous")
+
+  body  
+    block navbar
+    block content
+      include include/nav
+      if(page = "post")
+        include include/post
+
+
+    block foot
+      footer.foot 
+      //- div
+      //-   | © 2021 Weeblogg All rights reserved
+  script(src="../static/index.js")
