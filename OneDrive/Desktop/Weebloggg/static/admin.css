@@ -82,6 +82,7 @@ section.dashpage{
 }
 
 
+
 /* Post.pug */
 .post{
     margin: 2px;
@@ -112,14 +113,26 @@ section.dashpage{
 .postcontainer{
    background-color: blanchedalmond;
    margin: 2px; 
-   padding: 0 5px;
+   padding: 5px;
 }
 .postmenu{
+    padding: 10px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
+    width: 200px;
 }
 .postmenu a{
     display: flex;
+    justify-content: space-between;
+    margin: 3px 0;
+    padding: 5px;
+    font-size: 16px;
+    font-family: Balsamiq sans;
+}
+.postmenu a:hover{
+   border-radius: 10px;
+   background-color: rgb(115, 41, 199);
 }
 
 

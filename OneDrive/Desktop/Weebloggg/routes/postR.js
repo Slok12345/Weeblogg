@@ -6,7 +6,7 @@ const fs = require('fs')
 
 router.use(express.json()) // for parsing application/json
 router.use(express.urlencoded({ extended: true }))
-router.get("/admin/post", (req,res)=>{
+router.get("/admin/post", async (req,res)=>{
     try {
         res.render("../views/Dashboard/admin.pug", {
             page: "post"
@@ -15,7 +15,7 @@ router.get("/admin/post", (req,res)=>{
         res.status(500).json(err)
     }
 })
-router.get("/admin/post/addpost", (req,res)=>{
+router.get("/admin/post/addpost", async (req,res)=>{
 try {
         res.render("../views/Dashboard/admin.pug", {
             page: "addpost"
@@ -25,7 +25,7 @@ try {
     }
 })
 
-router.post("/addpost", async (req, res) => {
+router.post("/admin/post/addpost", async (req, res) => {
     try 
     {   
         const blog =  Post({
@@ -37,8 +37,8 @@ router.post("/addpost", async (req, res) => {
         })
         await blog.save()
         res.render("../views/Dashboard/admin.pug", {
-            page: "post",
-            message: " your blog is uploaded Chillax!!! "
+            // page: "post",
+            // message: " your blog is uploaded Chillax!!! "
         })
         Headers
     } catch (err) {
@@ -47,13 +47,13 @@ router.post("/addpost", async (req, res) => {
     
 })
 
-// router.get(`/post/show`,  (req,res)=>{
+router.get(`/post/show`,  (req,res)=>{
     
-//     try {
-//         res.json(db.posts.find())
-//     } catch (err) {
-//         res.status(500).json(err)
-//     }
-// })
+    try {
+        res.json(db.posts.find())
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
 module.exports = router
