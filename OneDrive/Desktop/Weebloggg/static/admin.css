@@ -15,11 +15,14 @@ body{
 /* Navbar */
 .navbar{
     display: flex;
+    align-items: center;
     background-color: rgb(115, 41, 199);
+    margin: 2px;
 }
 .navbar div.logo{
     height: 60px;
     width: auto;
+    margin: 2px;
 }
 .navbar div.logo img{
     margin: 2px;
@@ -42,6 +45,7 @@ body{
     width: 250px;
     background-color: rgb(115, 41, 199);
     color: black;
+    margin: 2px;
 }
 .navigation h3.dashboard{
     margin: 5px;
@@ -74,6 +78,23 @@ body{
 
 
 /* Post.pug */
+.post{
+    margin: 2px;
+    background-color: blanchedalmond;
+}
+.postheader{
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    width: 800px;
+}
+.postheader a{
+    display: flex;
+    /* height: 100px; */
+    justify-content: space-between;
+    width: 75px;
+
+}
 .addpost{
     display: flex;
     flex-direction: column;
