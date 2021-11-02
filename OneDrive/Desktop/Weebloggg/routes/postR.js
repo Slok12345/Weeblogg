@@ -6,7 +6,7 @@ const fs = require('fs')
 
 router.use(express.json()) // for parsing application/json
 router.use(express.urlencoded({ extended: true }))
-router.get("/post", (req,res)=>{
+router.get("/admin/post", (req,res)=>{
     try {
         res.render("../views/Dashboard/admin.pug", {
             page: "post"
@@ -15,7 +15,7 @@ router.get("/post", (req,res)=>{
         res.status(500).json(err)
     }
 })
-router.get("/addpost", (req,res)=>{
+router.get("/admin/post/addpost", (req,res)=>{
 try {
         res.render("../views/Dashboard/admin.pug", {
             page: "addpost"

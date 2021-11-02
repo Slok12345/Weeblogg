@@ -5,6 +5,7 @@ const mongoose = require('mongoose')
 const app = express();
 const port =  80;
 const Post = require('./routes/postR')
+const Admin = require('./routes/adminR')
 
 
 
@@ -13,7 +14,8 @@ mongoose
 .connect(db, { useNewUrlParser: true, useUnifiedTopology: true  })
 .then(console.log("Connected"))
   .catch((err) => console.log(err));
-  app.use("/admin", Post)
+  app.use(Post)
+  app.use(Admin)
 
 
 app.use(express.json());
