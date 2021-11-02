@@ -38,14 +38,19 @@ body{
     font-size: 25px;
 }
 /* navigation */
+section.dashpage{
+   display: flex;
+   flex-direction: row;
+}
 .navigation{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    width: 250px;
+    width: 22%;
     background-color: rgb(115, 41, 199);
     color: black;
     margin: 2px;
+    /* align-items: center; */
 }
 .navigation h3.dashboard{
     margin: 5px;
@@ -65,7 +70,7 @@ body{
 
 .navigation div.menu a{
     padding: 5px;
-    width: 200px;
+    width: 90%;
     display: flex;
     font-family: Balsamiq sans;
     font-size: 20px;
@@ -80,21 +85,48 @@ body{
 /* Post.pug */
 .post{
     margin: 2px;
-    background-color: blanchedalmond;
+    width: 78%;
 }
 .postheader{
+    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
     display: flex;
-    height: 100px;
+    height: 40px;
+    margin: 2px;
+    padding: 0 5px;
     justify-content: space-between;
-    width: 800px;
+    align-items: center;
 }
 .postheader a{
     display: flex;
-    /* height: 100px; */
     justify-content: space-between;
-    width: 75px;
-
+    align-items: center;
+    padding: 0 5px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
 }
+.postheader a:hover{
+    background-color: rgb(115, 41, 199);
+}
+.postcontainer{
+   background-color: blanchedalmond;
+   margin: 2px; 
+   padding: 0 5px;
+}
+.postmenu{
+    display: flex;
+    flex-direction: column;
+}
+.postmenu a{
+    display: flex;
+}
+
+
+
+
+
+/* Addpost */
 .addpost{
     display: flex;
     flex-direction: column;
@@ -110,10 +142,6 @@ body{
     width: 250px;
 }
 
-section.dashpage{
-display: flex;
-flex-direction: row;
-}
 
 
 
