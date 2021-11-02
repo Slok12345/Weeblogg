@@ -59,26 +59,31 @@ body{
     align-items: flex-start;
 }
 
-.navigation div.menu li{
+.navigation div.menu a{
+    padding: 5px;
     width: 200px;
     display: flex;
     font-family: Balsamiq sans;
     font-size: 20px;
     justify-content: space-between;
+    border-radius: 10px;
+}
+.navigation div.menu a:hover{
+    background-color: blanchedalmond;
 }
 
 
 /* Post.pug */
-.post_container{
+.addpost{
     display: flex;
     flex-direction: column;
 }
-.post_container form input{
+.addpost form input{
     display: flex;
     height: 30px;
     width: 250px;
 }
-.post_container form button{
+.addpost form button{
     display: flex;
     height: 30px;
     width: 250px;

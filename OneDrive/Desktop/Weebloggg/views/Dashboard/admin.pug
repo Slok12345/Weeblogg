@@ -16,7 +16,10 @@ html
     block content
       section.dashpage
         include include/nav
-        if(page = "post")
+        if(page == "addpost")
+          include include/addpost
+
+        if(page == "post")
           include include/post
         //- if(message)
         //-   h1.message=message

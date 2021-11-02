@@ -7,7 +7,7 @@ const fs = require('fs')
 router.use(express.json()) // for parsing application/json
 router.use(express.urlencoded({ extended: true }))
 router.get("/post", (req,res)=>{
-try {
+    try {
         res.render("../views/Dashboard/admin.pug", {
             page: "post"
         })
@@ -15,8 +15,17 @@ try {
         res.status(500).json(err)
     }
 })
+router.get("/addpost", (req,res)=>{
+try {
+        res.render("../views/Dashboard/admin.pug", {
+            page: "addpost"
+        })
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
-router.post("/post", async (req, res) => {
+router.post("/addpost", async (req, res) => {
     try 
     {   
         const blog =  Post({
@@ -38,13 +47,13 @@ router.post("/post", async (req, res) => {
     
 })
 
-router.get(`/post/show`,  (req,res)=>{
+// router.get(`/post/show`,  (req,res)=>{
     
-    try {
-        res.json(db.posts.find())
-    } catch (err) {
-        res.status(500).json(err)
-    }
-})
+//     try {
+//         res.json(db.posts.find())
+//     } catch (err) {
+//         res.status(500).json(err)
+//     }
+// })
 
 module.exports = router
