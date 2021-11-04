@@ -8,7 +8,7 @@ router.use(express.json()) // for parsing application/json
 router.use(express.urlencoded({ extended: true }))
 router.get("/admin/post", async (req,res)=>{
     try {
-        res.render("../views/Dashboard/admin.pug", {
+        res.render("../views/Dashboard/adminpanel.pug", {
             page: "post"
         })
     } catch (err) {
@@ -17,7 +17,7 @@ router.get("/admin/post", async (req,res)=>{
 })
 router.get("/admin/post/addpost", async (req,res)=>{
 try {
-        res.render("../views/Dashboard/admin.pug", {
+        res.render("../views/Dashboard/adminpanel.pug", {
             page: "addpost"
         })
     } catch (err) {
@@ -35,19 +35,17 @@ router.post("/admin/post/addpost", async (req, res) => {
             author : req.body.author,
             category : req.body.category
         })
-        await blog.save()
-        res.render("../views/Dashboard/admin.pug", {
-            // page: "post",
-            // message: " your blog is uploaded Chillax!!! "
+        await blog.save();
+        res.render("../views/Dashboard/adminpanel.pug", {
+            page: "post"
         })
-        Headers
     } catch (err) {
         res.render("Data not Saved")    
     }
     
 })
 
-router.get(`/post/show`,  (req,res)=>{
+router.get("/admin/post/show", async (req,res)=>{
     
     try {
         res.json(db.posts.find())

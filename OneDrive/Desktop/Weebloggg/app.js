@@ -5,7 +5,10 @@ const mongoose = require('mongoose')
 const app = express();
 const port =  80;
 const Post = require('./routes/postR')
-const Admin = require('./routes/adminR')
+const Admin = require('./routes/authdemo.js')
+const Admins = require('./routes/adminsR.js')
+const Employee = require('./routes/employeeR.js')
+const Settings = require('./routes/settingsR.js')
 
 
 
@@ -16,6 +19,9 @@ mongoose
   .catch((err) => console.log(err));
   app.use(Post)
   app.use(Admin)
+  app.use(Admins)
+  app.use(Employee)
+  app.use(Settings)
 
 
 app.use(express.json());
@@ -35,23 +41,23 @@ app.set('views', path.join(__dirname, 'views')) // Set the views directory
 // ENDPOINTS
 app.get('/', (req, res) => {
   const params ={}
-  res.render('home.pug', params)
+  res.render('public/home.pug', params)
 })
 app.get('/programming', (req, res) => {
   const params = {}
-  res.status(200).render('programming.pug', params)
+  res.status(200).render('public/programming.pug', params)
 })
 app.get('/gamming', (req, res) => {
   const params = {}
-  res.status(200).render('gamming.pug', params)
+  res.status(200).render('public/gamming.pug', params)
 })
 app.get('/launchpad', (req, res) => {
   const params = {}
-  res.status(200).render('launchpad.pug', params)
+  res.status(200).render('public/launchpad.pug', params)
 })
 app.get('/news', (req, res) => {
   const params = {}
-  res.status(200).render('news.pug', params)
+  res.status(200).render('public/news.pug', params)
 })
 
 
